@@ -5,16 +5,17 @@ import java.net.URL;
 public class RealSubject implements Image{
 	URL imageURL;
 
-	/* (non-Javadoc)
-	 * @see cd.Image#showImage(java.net.URL)
-	 */
-	@Override
-	public void showImage(URL url) {
-
-		/**
-		 * display image
-		 */
-		 System.out.println("HighRes Image");
-		
+	public RealSubject(URL url) {
+		this.imageURL = url; 
+		loadImage();
 	}
+
+	private void loadImage() {
+		System.out.println("Loading  " + imageURL);
+	}
+	
+	public void showImage() {
+		 System.out.println("Displaying  " + imageURL);		
+	}
+
 }
