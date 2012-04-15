@@ -1,18 +1,17 @@
 package cd;
-import java.net.URL;
 
 public class Proxy implements Image {
 
-	private URL imageURL;
+	private String imageURL;
 	private Image image;
 	
-	public Proxy(URL imageURL) {
+	public Proxy(String imageURL) {
 		this.imageURL= imageURL;
 	}
 	
-	public void showImage() {
+	public String showImage() {
 		image = new RealSubject(imageURL);
-		image.showImage();
+		return image.showImage();
 	}
 
 }

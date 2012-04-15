@@ -1,21 +1,19 @@
 package cd;
 
-import java.net.URL;
-
 public class RealSubject implements Image{
-	URL imageURL;
+	String imageURL;
 
-	public RealSubject(URL url) {
+	public RealSubject(String url) {
 		this.imageURL = url; 
 		loadImage();
 	}
 
-	private void loadImage() {
-		System.out.println("Loading  " + imageURL);
+	private String loadImage() {
+		return("Loading  " + imageURL);
 	}
 	
-	public void showImage() {
-		 System.out.println("Displaying  " + imageURL);		
+	public String showImage() {
+		return("Displaying  " + imageURL);		
 	}
 
 }
